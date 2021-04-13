@@ -48,7 +48,18 @@
       line-height: 18px;
       
     }
+
+    .container {
+      display: flex;
+      flex-flow: row nowrap;
+      height: 250px;
+    }
   
+    .item {
+      width: 40%;
+      height: 40%;
+    }
+
     .responsive {
       width: 100%;
       height: auto;
