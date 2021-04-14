@@ -58,6 +58,9 @@ home.addEventListener('click', (e) => {
     
 })
 
+//sidebar
+const form = document.querySelector("body > div.sidebar > form")
+
 
 
 
