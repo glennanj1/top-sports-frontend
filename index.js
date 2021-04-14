@@ -2,6 +2,8 @@
 const sports = document.getElementById('item')
 //container
 const n = document.getElementById('item')
+// home button
+const home = welcome
 //test fetch for initial load
 fetch('http://localhost:3000/sports').then(r => r.json()).then(appendItems)
 
@@ -19,7 +21,7 @@ function appendItems(x) {
     });
 }
 
-
+//sports fetch
 sports.addEventListener('click', (event) => {
     event.preventDefault()
     // console.log(event.target.id)
@@ -29,7 +31,7 @@ sports.addEventListener('click', (event) => {
     function appendSports(x) {
     n.style.display = 'none'
     const newItem = document.createElement('div')
-    newItem.id = 'item'
+    newItem.id = 'game'
     const container = document.querySelector("#container")
     container.append(newItem)
     const games = x['data']
@@ -47,6 +49,20 @@ sports.addEventListener('click', (event) => {
 
     }
 })
+//home button
+home.addEventListener('click', (e) => {
+    console.log(e)
+    e.preventDefault()
+    game.remove()
+    n.style.display = 'block'
+    
+})
+
+
+
+
+
+
 
 
 
