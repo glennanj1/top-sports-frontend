@@ -27,7 +27,7 @@ sports.addEventListener('click', (event) => {
     return fetch(`http://localhost:3000/sports/${event.target.id}/games`).then(r => r.json()).then(appendSports)
 
     function appendSports(x) {
-    n.remove()
+    n.style.display = 'none'
     const newItem = document.createElement('div')
     newItem.id = 'item'
     const container = document.querySelector("#container")
@@ -47,6 +47,8 @@ sports.addEventListener('click', (event) => {
 
     }
 })
+
+
 
 
 
