@@ -93,7 +93,7 @@
       display: flex;
       flex-wrap: wrap;
       float: left;
-      width: 50%;
+      width: 100%;
     }
 
     .flex-container > div {
