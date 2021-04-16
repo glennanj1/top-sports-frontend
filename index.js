@@ -2,10 +2,6 @@
 const sports = document.getElementById('container')
 // home button
 const home = welcome
-//odds objects
-const odds = []
-//bets 
-const sites = []
 //sports fetch on initial load
 loadSports()
 
@@ -74,19 +70,20 @@ gameContainer.addEventListener('click', (event) => {
         console.log(odd.site_nice);
         console.log(`${odd.odds['h2h'][0]}  ${odd.odds['h2h'][1]}`);
         const div = document.createElement('div')
+        const o = document.createElement('li')
+        
         div.id = odd.site_key
         div.innerText = `${odd.site_nice}: ${odd.odds['h2h'][0]}  ${odd.odds['h2h'][1]}`
         newItem.appendChild(div)
         return div
     }
-    debugger;
-    
-    // tableElements.forEach(e => {
-    //     newItem.appendChild(e)
-    // });
     }
 })
 
+//odds page event to trigger betslip
+oddsContainer.addEventListener('click', (event) => {
+    console.log(event.target)
+} )
 
 //home button
 home.addEventListener('click', (e) => {
