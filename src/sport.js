@@ -12,7 +12,7 @@ class Sport {
         this.title = title 
         this.div = document.createElement('div')
 
-        Sport.all.push(this)
+        Sport.sports.push(this)
 
     }
 
