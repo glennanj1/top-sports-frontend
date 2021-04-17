@@ -18,20 +18,24 @@ class Game {
     }
 
     loadGames() {
-
-        this.div.innerHTML = `<ol>
-                                <li>
-                                    ${this.teams}
-                                    ${this.commence_time}
-                                </li>
-                              </ol>
-                              `
+        this.div.id = this.id
+        this.div.innerHTML = `<li>
+                                ${this.teams}
+                                ${this.commence_time}
+                              </li>`
         return this.div
     }
 
     render() {
         Game.gameContainer.append(this.loadGames())
+        this.event()
     }
 
+    event() {
+        this.div.addEventListener('click', (e) => {
+            console.log(e.currentTarget.id)
+            gameContainer.innerHTML = ''
+        })
+    }
 
 }
