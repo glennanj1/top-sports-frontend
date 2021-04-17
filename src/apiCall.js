@@ -18,7 +18,12 @@ class ApiCall {
 
     fetchGames() {
         fetch(this.gameUrl).then(response => response.json()).then(data => {
-            debugger
-        })
+            data['data'].forEach(e => {
+                const game = new Game({id: e.id, ...e.attributes})
+                game.render()
+            })
+        })       
+                
+        
     }
 } 
