@@ -34,11 +34,11 @@ class Sport {
         this.event()
     }
 
-    event(){
+    event() {
         this.div.addEventListener('click', (e) => {
             console.log(e.currentTarget.id)  
             //remove sports
-            container.remove()
+            container.innerHTML = ''
             //append games function?
             let id = e.currentTarget.id
             const gameCall = new ApiCall(url, id)
