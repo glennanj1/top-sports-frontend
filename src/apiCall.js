@@ -3,7 +3,6 @@ class ApiCall {
     constructor(url, id) {
         this.sportUrl = `${url}/sports`
         this.gameUrl = `${url}/sports/${id}/games`
-    
     }
 
     fetchSports() {
@@ -23,7 +22,5 @@ class ApiCall {
                 game.render()
             })
         })       
-                
-        
     }
 } 
