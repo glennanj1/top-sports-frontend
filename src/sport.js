@@ -18,13 +18,7 @@ class Sport {
 
     loadSports() {
         this.div.id = `${this.id}`
-        this.div.innerHTMl = `<div>
-                                <table>
-                                    <th>${this.details}</th>
-                                    <th>${this.active}</th>
-                                </table>
-                              </div>`
-        
+        this.div.innerHTML = `<li>${this.title}</li>`
         return this.div
     }
 
