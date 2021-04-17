@@ -17,5 +17,21 @@ class Game {
         Game.games.push(this)
     }
 
+    loadGames() {
+
+        this.div.innerHTML = `<ol>
+                                <li>
+                                    ${this.teams}
+                                    ${this.commence_time}
+                                </li>
+                              </ol>
+                              `
+        return this.div
+    }
+
+    render() {
+        Game.gameContainer.append(this.loadGames())
+    }
+
 
 }
