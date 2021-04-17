@@ -5,53 +5,9 @@ const home = welcome
 //sports fetch on initial load
 
 
-// function loadSports() {
-//  fetch('http://localhost:3000/sports').then(r => r.json()).then(appendItems)
-//     sports.style.display = 'in-line'
-//     function appendItems(x) {
-//         const s = x['data'];
-        
-//         const divElements = s.map(function(x){
-//             const div = document.createElement('div')
-//             div.id = `${x.id}`
-//             div.innerText = `${x.attributes.title}`
-//             return div
-//         })
-//         divElements.forEach(e => {
-//             sports.appendChild(e)
-//         });
-//     }
-// }
 
-//games fetch
-// sports.addEventListener('click', (event) => {
-//     event.preventDefault()
-//     // console.log(event.target.id)
-//     return fetch(`http://localhost:3000/sports/${event.target.id}/games`).then(r => r.json()).then(appendSports)
 
-//     function appendSports(x) {
-    
-//     sports.style.display = 'none'
-//     const newItem = document.createElement('div')
-//     newItem.id = 'game'
-//     const container = document.querySelector("#gameContainer")
-//     container.append(newItem)
-//     const games = x['data']
-//     const liElements = games.map(function(x){
-//         const li = document.createElement('li')
-//         li.id = `${x.id}`
-//         li.innerText = `${x.attributes.teams} ${x.attributes['sport_nice']}`
-//         li.className = 'wrapper'
-//         return li
-//     })
-//     liElements.forEach(e => {
-//         newItem.appendChild(e)
-//     });
 
-    
-
-//     }
-// })
 
 // //odd fetch
 // gameContainer.addEventListener('click', (event) => {
@@ -85,15 +41,15 @@ const home = welcome
 //     console.log(event.target)
 // } )
 
-// //home button
-// home.addEventListener('click', (e) => {
-//     console.log(e)
-//     e.preventDefault()
-//     gameContainer.innerHTML = ''
-//     oddsContainer.innerHTML = ''
-//     container.style.display = 'flex'
+//home button
+home.addEventListener('click', (e) => {
+    console.log(e)
+    e.preventDefault()
+    gameContainer.innerHTML = ''
+    oddsContainer.innerHTML = ''
+    apiCall.fetchSports()
     
-// })
+})
 
 // //sidebar
 // const form = document.querySelector("body > div.sidebar > form")
