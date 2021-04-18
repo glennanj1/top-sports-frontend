@@ -29,29 +29,36 @@ class Game {
     }
 
     loadOdds() {
-       
+        
         this.div.id = this.id 
-        let o = this.odds.split()
-        this.div.innerHTML = `<li>
-                                ${this.sites}
-                                ${this.odds[0]}
-                                ${this.odds[1]}
-                              </li>`
-        debugger
-        return div
+        this.div.innerHTML = `<div>
+                                <h1>${this.sites}</h1><br>
+                                <h2>${this.teams}</h2>
+                                <li id='odd1'>${this.odds}</li><br>
+                                <li id='odd2'>${this.odds1}</li><br>
+                              </div>`
+        Game.gameContainer.append(this.div)
     }
 
     render() {
         Game.gameContainer.append(this.loadGames())
-        this.event()
+        this.sportEvent()
     }
 
-    event() {
+    sportEvent() {
         this.div.addEventListener('click', (e) => {
-            console.log(e.currentTarget.id)
-            gameContainer.innerHTML = ''
+            debugger;
+            if (e.target.id == 'odd1' || e.target.id == 'odd2') {
+                debugger
+                alert('You Selected Odds')
+            } else {
+            console.log(e.target)
+            gameContainer.innerHTML = ''    
             this.loadOdds()
+            }
+            
         })
+        
     }
 
 }
