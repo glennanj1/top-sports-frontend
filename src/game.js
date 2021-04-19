@@ -47,10 +47,12 @@ class Game {
 
     sportEvent() {
         this.div.addEventListener('click', (e) => {
-            debugger;
+        
             if (e.target.id == 'odd1' || e.target.id == 'odd2') {
-                debugger
-                alert('You Selected Odds')
+                //load in bet form and highlight selected odds (e.target.id)
+                Game.gameContainer.style.width = '60%'
+                betslipContainer.style.display = 'flex'
+                betslip.odds.value = e.target.innerText
             } else {
             console.log(e.target)
             gameContainer.innerHTML = ''    
