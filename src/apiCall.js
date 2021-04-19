@@ -3,11 +3,8 @@ class ApiCall {
     constructor(url, id) {
         this.sportUrl = `${url}/sports`
         this.gameUrl = `${url}/sports/${id}/games`
-        //show page
         this.betUrl = `${url}/bets`
     }
-
-    
 
     fetchSports() {
         fetch(this.sportUrl).then(response => response.json()).then(data => {
@@ -33,7 +30,8 @@ class ApiCall {
             amount:  amount.value,
             date: date.value,
             odds: odds.value,
-            game_id: game_id.value
+            game_id: game_id.value,
+            team: team.value
        }
 
         const configObj = {
@@ -50,8 +48,16 @@ class ApiCall {
         fetch(this.betUrl, configObj).then(r => r.json()).then(data => {
             
             const bet = new Bet({id: data['data'].id, ...data['data'].attributes})
-            debugger;
             bet.render()
             }) 
         }
+
+    fetchAllBets() {
+        fetch(this.betUrl).then(r => r.json()).then(data => {
+            data['data'].forEach(e => {
+                const bet = new Bet({id: e.id, ...e.attributes})
+                bet.render()
+            })
+        })
+    }
 } 
