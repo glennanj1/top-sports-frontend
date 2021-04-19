@@ -53,14 +53,13 @@ class Game {
                 Game.gameContainer.style.width = '60%'
                 betslipContainer.style.display = 'flex'
                 betslip.odds.value = e.target.innerText
+                betslip.game_id.value = this.id
             } else {
             console.log(e.target)
             gameContainer.innerHTML = ''    
             this.loadOdds()
             }
-            
-        })
-        
+        }) 
     }
 
 }
