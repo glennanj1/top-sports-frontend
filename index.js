@@ -3,6 +3,7 @@ const apiCall = new ApiCall(url)
 // home button
 const home = welcome
 
+
 //home button
 home.addEventListener('click', (e) => {
     console.log(e)
@@ -12,8 +13,15 @@ home.addEventListener('click', (e) => {
     oddsContainer.innerHTML = ''
     betslipContainer.style.display = 'none'
     apiCall.fetchSports()
-    
 })
+
+//bet submit handler
+const betSubmit = (e) => { 
+    e.preventDefault(),
+    apiCall.fetchBets()
+}
+//betslip event
+betslip.addEventListener('submit', betSubmit)
 
 //sportsfetch on dom load
 apiCall.fetchSports()
