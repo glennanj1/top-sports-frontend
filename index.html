@@ -12,12 +12,11 @@
   <body>
     <div class="topnav">
       <a id="welcome" class="active">Home</a>
-      <!-- <a id="bets">All Bets</a>
-      <a id="newBet">New Bet</a>
-      <a id="sports">Sports</a> -->
+      <a id="bets">All Bets</a>
+    
     </div>
 
-    <h2>Top Sports</h2>
+    <h2>Top Sports Personal Bet Tracker</h2>
 
     <div id='betslipContainer' class="sidebar">
       <form id='betslip'>
@@ -27,10 +26,11 @@
         <label for="date">Date</label><br>
         <input type="date" id="date" name="date"><br>
         <label for="odds">Odds</label><br>
-        <input type="number" id="odds" name="odds"><br><br><br>
+        <input type="number" id="odds" name="odds"><br>
+        <label for="team">Team</label><br>
+        <input type="text" id="team" name="team"><br>
 
         <input type="hidden" id="game_id" value="">
-
         
         <input type="submit" value="Submit">
       </form>
@@ -43,11 +43,13 @@
 
     <div id="oddsContainer" class="flex-container"></div>
 
-    <div id="betContainer"></div>
+    <div id="betContainer" display='none'>
+
+    </div>
 
 
 
-    <footer class="footer">
+    <br><br><footer class="footer">
         <h4 style="color:black;">&copy; 2021 <strong>John Glennan</strong></h4>
     </footer>
 
