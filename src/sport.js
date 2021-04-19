@@ -16,15 +16,13 @@ class Sport {
 
     }
 
-    
-
     loadSports() {
         this.div.id = `${this.id}`
         this.div.innerHTML = `<li>
-                                ${this.title}
-                                ${this.group}
-                                ${this.details}
-                                ${this.active}
+                                <h2>${this.title}</h2>
+                                <h3>Group: ${this.group}</h3>
+                                <h3>Details:${this.details}</h3>
+                                <h4>Active: ${this.active}</h4>
                               </li>`
         return this.div
     }
