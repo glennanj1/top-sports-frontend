@@ -8,7 +8,9 @@ home.addEventListener('click', (e) => {
     console.log(e)
     e.preventDefault()
     gameContainer.innerHTML = ''
+    Game.gameContainer.style.width = '100%'
     oddsContainer.innerHTML = ''
+    betslipContainer.style.display = 'none'
     apiCall.fetchSports()
     
 })
