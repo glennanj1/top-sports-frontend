@@ -1,4 +1,4 @@
-const url = 'https://topsports.herokuapp.com/'
+const url = 'https://topsports.herokuapp.com'
 const apiCall = new ApiCall(url)
 // home button
 const home = welcome
