@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000'
+const url = 'https://topsports.herokuapp.com/'
 const apiCall = new ApiCall(url)
 // home button
 const home = welcome
