@@ -22,7 +22,6 @@ class Game {
     }
 
     loadGames() {
-        debugger;
         this.div.id = this.id
         this.div.innerHTML = `<li>
                                 <h3>Matchup: ${this.teams}<h3><br>
