@@ -31,6 +31,7 @@ class Bet {
                                 <h2>Odds: ${this.odds}</h2>
                                 <h2>Team: ${this.team}</h2>
                                 <h4>Placed at: ${this.created_at}</h4>
+                              </div>
                                 `
                               
        return this.div
