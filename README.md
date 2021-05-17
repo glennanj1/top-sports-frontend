@@ -1,10 +1,10 @@
 # README
 
 # Top Sports Book Front End
-Vanilla Javascript application that uses ES6 classes that communicate with a rails api through AJAX.
+Vanilla Javascript SPA that uses ES6 classes. Fetches sports data with a rails api through AJAX.
 
 # Install Instructions
-First dowload the file from github. Then cd into the root directory After that use the command open index.html and make sure the rails server is started.
+First clone the file from github. Then cd into the root directory After that use the command open index.html and make sure the backend rails server is started.
 
 # Contributers Guide
 Feel free to contribute to this project.
