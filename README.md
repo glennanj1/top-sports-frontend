@@ -1,7 +1,8 @@
 # README
 
 # Top Sports Book Front End
-Vanilla Javascript SPA that uses ES6 classes. Fetches sports data with a rails api through AJAX.
+Personal bet tracking app that focuses on speed and convienence with no page re-rendering (SPA).
+Utlizes Javascripts ES6 classes. Fetches sports data with a rails api through AJAX.
 
 # Install Instructions
 First clone the file from github. Then cd into the root directory After that use the command open index.html and make sure the backend rails server is started.
